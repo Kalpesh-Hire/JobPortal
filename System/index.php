@@ -98,11 +98,11 @@ include 'constants/check-login.php';
 							</li>
 							
 							<li>
-								<a href="employers.php">Employers</a>
+								<a href="employers.php">Recruiter</a>
 							</li>
 							
 							<li>
-								<a href="employees.php">Employees</a>
+								<a href="employees.php">Jobseeker</a>
 							</li>
 							
 							<li>
