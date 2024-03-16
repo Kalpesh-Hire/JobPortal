@@ -60,7 +60,6 @@ include 'constants/check-login.php';
 	width:100px;
     object-fit:cover; 
   }
-  
 
   </style>
 <body class="home">
