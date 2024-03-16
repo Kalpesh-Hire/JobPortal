@@ -561,8 +561,8 @@ include 'constants/check-login.php';
 										<ul class="footer-menu clearfix">
 											<li><a href="./">Home</a></li>
 											<li><a href="job-list.php">Job List</a></li>
-											<li><a href="employers.php">Employers</a></li>
-											<li><a href="employees.php">Employees</a></li>
+											<li><a href="employers.php">Recruiter</a></li>
+											<li><a href="employees.php">Jobseeker</a></li>
 											<li><a href="contact.php">Contact Us</a></li>
 											<li><a href="#">Go to top</a></li>
 
@@ -607,7 +607,7 @@ include 'constants/check-login.php';
 							<div class="col-sm-4 col-md-4">
 							
 								<ul class="bottom-footer-menu">
-									<li><a >Developed by @jobportal</a></li>
+									<li><a >Developed by @jobportal_Team</a></li>
 								</ul>
 							
 							</div>
