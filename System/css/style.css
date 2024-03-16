@@ -409,13 +409,11 @@ ul.nav-mini li a {
     padding: 0;
 }
 
-.navbar-sticky .navbar-nav > li > a {}
-
-.navbar-sticky .navbar-nav > li > a:hover,
+/* .navbar-sticky .navbar-nav > li > a:hover,
 .navbar-sticky .navbar-nav > li > a:focus {
     color: #4D82B8;
     background-color: transparent
-}
+} */
 
 .navbar-sticky .navbar-nav > .active > a,
 .navbar-sticky .navbar-nav > .active > a:hover,
@@ -439,9 +437,7 @@ ul.nav-mini li a {
     top: 50px;
 }
 
-.navbar-sticky .logo-wrapper .logo {}
-
-@media only screen and (max-width: 1199px) {}
+/* @media only screen and (max-width: 1199px) {} */
 
 @media only screen and (max-width: 991px) {
     .navbar-fixed-top {

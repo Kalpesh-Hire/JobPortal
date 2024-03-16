@@ -43,12 +43,7 @@ include '../constants/db_config.php';
 	 </div>
      ';
 					  
-	}catch(PDOException $e)
-    {
-
-    }
-	
-		
+	}catch(PDOException $e){}		
 	}else{
 	foreach($result as $row)
     {
@@ -57,17 +52,7 @@ include '../constants/db_config.php';
      You have already applied this job before , you can not apply again.
 	 </div>
      ';
-	}	
-		
-	}
-
-
-					  
-	}catch(PDOException $e)
-    {
-
-    }
-	
+	}}					  
+	}catch(PDOException $e){}	
 }}
-
 ?>
