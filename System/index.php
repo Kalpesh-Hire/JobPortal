@@ -10,7 +10,7 @@ include 'constants/check-login.php';
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Nightingale Jobs - Job Portal</title>
+	<title>Job Portal</title>
 	<meta name="description" content="Online Job Management / Job Portal" />
 	<meta name="keywords" content="job, work, resume, applicants, application, employee, employer, hire, hiring, human resource management, hr, online job management, company, worker, career, recruiting, recruitment" />
 	<meta name="author" content="BwireSoft">
@@ -60,7 +60,6 @@ include 'constants/check-login.php';
 	width:100px;
     object-fit:cover; 
   }
-  
 
   </style>
 <body class="home">
@@ -78,7 +77,7 @@ include 'constants/check-login.php';
 					
 					<div class="logo-wrapper">
 						<div class="logo">
-							<a href="./"><img src="images/logo.png" alt="Logo" /></a>
+							<a href="./"><img src="images/Job (1).png" alt="Logo" /></a>
 						</div>
 					</div>
 					
@@ -98,11 +97,11 @@ include 'constants/check-login.php';
 							</li>
 							
 							<li>
-								<a href="employers.php">Employers</a>
+								<a href="employers.php">Recruiter</a>
 							</li>
 							
 							<li>
-								<a href="employees.php">Employees</a>
+								<a href="employees.php">Jobseeker</a>
 							</li>
 							
 							<li>
@@ -171,7 +170,7 @@ include 'constants/check-login.php';
 
 		<div class="main-wrapper">
 		
-			<div class="hero" style="background-image:url('images/hero-header/01.jpg');">
+			<div class="hero" style="background-image:url('images/hero-header/jobSearch.jpg');">
 				<div class="container">
 
 					<h1>your bright future starts here now</h1>
@@ -550,7 +549,7 @@ include 'constants/check-login.php';
 									
 										<div class="footer-about-us">
 											<h5 class="footer-title">About Nightingale Jobs</h5>
-											<p>Nightingale Jobs is a job portal, online job management system developed by Nathaniel Nkrumah for his project in february 2018.</p>
+											<p>Nightingale Jobs is a job portal, online job management system developed by @jobportal_Team</p>
 										
 										</div>
 
@@ -561,8 +560,8 @@ include 'constants/check-login.php';
 										<ul class="footer-menu clearfix">
 											<li><a href="./">Home</a></li>
 											<li><a href="job-list.php">Job List</a></li>
-											<li><a href="employers.php">Employers</a></li>
-											<li><a href="employees.php">Employees</a></li>
+											<li><a href="employers.php">Recruiter</a></li>
+											<li><a href="employees.php">Jobseeker</a></li>
 											<li><a href="contact.php">Contact Us</a></li>
 											<li><a href="#">Go to top</a></li>
 
@@ -576,10 +575,10 @@ include 'constants/check-login.php';
 							
 							<div class="col-sm-12 col-md-3 mt-30-sm">
 							
-								<h5 class="footer-title">Nightingale Jobs Contact</h5>
+								<h5 class="footer-title">@jobportal Contact</h5>
 								
 								<p>Address : Takoradi, School Junction PO.BOX AX40</p>
-								<p>Email : <a href="mailto:nightingale.nath2@gmail.com">nightingale.nath2@gmail.com</a></p>
+								<p>Email : <a href="mailto:gokullade89@gmail.com">jobportal@gmail.com</a></p>
 								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
 								
 
@@ -600,14 +599,14 @@ include 'constants/check-login.php';
 						
 							<div class="col-sm-4 col-md-4">
 					
-								<p class="copy-right">&#169; Copyright <?php echo date('Y'); ?> Nightingale Vision Software</p>
+								<p class="copy-right">&#169; Copyright <?php echo date('Y'); ?> @jobportal</p>
 								
 							</div>
 							
 							<div class="col-sm-4 col-md-4">
 							
 								<ul class="bottom-footer-menu">
-									<li><a >Developed by Nathaniel Nkrumah</a></li>
+									<li><a >Developed by @jobportal_Team</a></li>
 								</ul>
 							
 							</div>

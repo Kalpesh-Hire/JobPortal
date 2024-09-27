@@ -4,31 +4,20 @@
 require 'constants/settings.php'; 
 require 'constants/check-login.php';
 require 'constants/db_config.php';
-
 if (isset($_GET['ref'])) {
-
 $company_id = $_GET['ref'];
-
-
-
     try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-	
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
     $stmt = $conn->prepare("SELECT * FROM tbl_users WHERE member_no = :memberno AND role = 'employer'");
 	$stmt->bindParam(':memberno', $company_id);
     $stmt->execute();
     $result = $stmt->fetchAll();
-	$rec = count($result);
-	
+	$rec = count($result);	
 	if ($rec == "0") {
 	header("location:./");	
 	}else{
-
-    foreach($result as $row)
-    {
-		
+    foreach($result as $row){		
     $compname = $row['first_name'];
 	$compesta = $row['byear'];
     $compmail  = $row['email'];
@@ -43,43 +32,25 @@ $company_id = $_GET['ref'];
 	$compserv = $row['services'];
 	$compexp = $row['expertise'];
 	$compweb = $row['website'];
-	$comppeopl = $row['people'];
-	
-	}
-	
-	}
-
-					  
-	}catch(PDOException $e)
-    {
- 
-    }
-	
+	$comppeopl = $row['people'];}}					  
+	}catch(PDOException $e){}	
 }else{
-header("location:./");
-}
-
+header("location:./");}
 if (isset($_GET['page'])) {
 $page = $_GET['page'];
-if ($page=="" || $page=="1")
-{
+if ($page=="" || $page=="1"){
 $page1 = 0;
 $page = 1;
 }else{
-$page1 = ($page*5)-5;
-}					
-}else{
+$page1 = ($page*5)-5;}}else{
 $page1 = 0;
-$page = 1;	
-}
+$page = 1;}
 ?>
 <head>
-
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>Nightingale Jobs - <?php echo "$compname"; ?></title>
+	<title>JobPortal - <?php echo "$compname"; ?></title>
 	<meta name="description" content="Online Job Management / Job Portal" />
 	<meta name="keywords" content="job, work, resume, applicants, application, employee, employer, hire, hiring, human resource management, hr, online job management, company, worker, career, recruiting, recruitment" />
 	<meta name="author" content="BwireSoft">
@@ -91,14 +62,11 @@ $page = 1;
     <meta property="og:image:height" content="300" />
     <meta property="og:image:alt" content="Nightingale Jobs" />
     <meta property="og:description" content="Online Job Management / Job Portal" />
-
-	<link rel="shortcut icon" href="images/ico/favicon.png">
-	
+	<link rel="shortcut icon" href="images/ico/favicon.png">	
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" media="screen">	
 	<link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/component.css" rel="stylesheet">
-
 	<link rel="stylesheet" href="icons/linearicons/style.css">
 	<link rel="stylesheet" href="icons/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="icons/simple-line-icons/css/simple-line-icons.css">
@@ -109,63 +77,27 @@ $page = 1;
 	<link rel="stylesheet" href="icons/flaticon-streamline-outline/flaticon-streamline-outline.css">
 	<link rel="stylesheet" href="icons/flaticon-thick-icons/flaticon-thick.css">
 	<link rel="stylesheet" href="icons/flaticon-ventures/flaticon-ventures.css">
-
-	<link href="css/style.css" rel="stylesheet">
-
-	
+	<link href="css/style.css" rel="stylesheet">	
 </head>
-
-
 <body class="not-transparent-header">
-
-	<div class="container-wrapper">
-
-	
+	<div class="container-wrapper">	
 		<header id="header">
-
-
-
 			<nav class="navbar navbar-default navbar-fixed-top navbar-sticky-function">
-
-				<div class="container">
-					
+				<div class="container">					
 					<div class="logo-wrapper">
 						<div class="logo">
-							<a href="./"><img src="images/logo.png" alt="Logo" /></a>
+							<a href="./"><img src="images/Job (1).png" alt="Logo" /></a>
 						</div>
-					</div>
-					
-					<div id="navbar" class="navbar-nav-wrapper navbar-arrow">
-					
-						<ul class="nav navbar-nav" id="responsive-menu">
-						
-							<li>
-							
-								<a href="./">Home</a>
-								
-							</li>
-							
-							<li>
-								<a href="job-list.php">Job List</a>
-
-							</li>
-							
-							<li>
-								<a href="employers.php">Employers</a>
-							</li>
-							
-							<li>
-								<a href="employees.php">Employees</a>
-							</li>
-							
-							<li>
-								<a href="contact.php">Contact Us</a>
-							</li>
-
+					</div>					
+					<div id="navbar" class="navbar-nav-wrapper navbar-arrow">					
+						<ul class="nav navbar-nav" id="responsive-menu">						
+							<li><a href="./">Home</a></li>							
+							<li><a href="job-list.php">Job List</a></li>
+							<li><a href="employers.php">Recruiter</a></li>
+							<li><a href="employees.php">Jobseeker</a></li>
+							<li><a href="contact.php">Contact Us</a></li>
 						</ul>
-				
 					</div>
-
 					<div class="nav-mini-wrapper">
 						<ul class="nav-mini sign-in">
 						<?php
@@ -177,40 +109,24 @@ $page = 1;
 						print '
 							<li><a href="login.php">login</a></li>
 							<li><a data-toggle="modal" href="#registerModal">register</a></li>';						
-						}
-						
+						}						
 						?>
-
 						</ul>
-					</div>
-				
-				</div>
-				
-				<div id="slicknav-mobile"></div>
-				
-			</nav>
-
-			
+					</div>				
+				</div>				
+				<div id="slicknav-mobile"></div>				
+			</nav>			
 		</header>
-
-		<div class="main-wrapper">
-		
-			<div class="breadcrumb-wrapper">
-			
-				<div class="container">
-				
+		<div class="main-wrapper">		
+			<div class="breadcrumb-wrapper">			
+				<div class="container">				
 					<ol class="breadcrumb-list booking-step">
 						<li><a href="employers.php">Employers</a></li>
 						<li><span><?php echo "$compname"; ?></span></li>
-					</ol>
-					
-				</div>
-				
-			</div>
-
-			
-			<div class="section sm">
-			
+					</ol>					
+				</div>				
+			</div>			
+			<div class="section sm">			
 				<div class="container">
 				
 					<div class="row">
@@ -479,7 +395,7 @@ $page = 1;
 									
 										<div class="footer-about-us">
 											<h5 class="footer-title">About Nightingale Jobs</h5>
-											<p>Nightingale Jobs is a job portal, online job management system developed by Nathaniel Nkrumah for his project in february 2018.</p>
+											<p>Nightingale Jobs is a job portal, online job management system developed by  @jobportal_Team</p>
 										
 										</div>
 
@@ -490,8 +406,8 @@ $page = 1;
 										<ul class="footer-menu clearfix">
 											<li><a href="../">Home</a></li>
 											<li><a href="../job-list.php">Job List</a></li>
-											<li><a href="../employers.php">Employers</a></li>
-											<li><a href="../employees.php">Employees</a></li>
+											<li><a href="../employers.php">Recruiter</a></li>
+											<li><a href="../employees.php">Jobseeker</a></li>
 											<li><a href="../contact.php">Contact Us</a></li>
 											<li><a href="#">Go to top</a></li>
 
@@ -508,7 +424,7 @@ $page = 1;
 								<h5 class="footer-title">Nightingale Jobs Contact</h5>
 								
 								<p>Address : Takoradi, School Junction PO.BOX AX40</p>
-								<p>Email : <a href="mailto:nightingale.nath2@gmail.com">nightingale.nath2@gmail.com</a></p>
+								<p>Email : <a href="mailto:nightingale.nath2@gmail.com">jobportal_Team@gmail.com</a></p>
 								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
 								
 
@@ -536,7 +452,7 @@ $page = 1;
 							<div class="col-sm-4 col-md-4">
 							
 								<ul class="bottom-footer-menu">
-									<li><a >Developed by Nathaniel Nkrumah</a></li>
+									<li><a >Developed by  @jobportal_Team</a></li>
 								</ul>
 							
 							</div>

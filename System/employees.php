@@ -25,7 +25,7 @@ $page = 1;
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Nightingale Jobs - Employees</title>
+	<title>JobPortal</title>
 	<meta name="description" content="Online Job Management / Job Portal" />
 	<meta name="keywords" content="job, work, resume, applicants, application, employee, employer, hire, hiring, human resource management, hr, online job management, company, worker, career, recruiting, recruitment" />
 	<meta name="author" content="BwireSoft">
@@ -82,7 +82,7 @@ $page = 1;
 					
 					<div class="logo-wrapper">
 						<div class="logo">
-							<a href="./"><img src="images/logo.png" alt="Logo" /></a>
+							<a href="./"><img src="images/Job (1).png" alt="Logo" /></a>
 						</div>
 					</div>
 					
@@ -102,11 +102,11 @@ $page = 1;
 							</li>
 							
 							<li>
-								<a href="employers.php">Employers</a>
+								<a href="employers.php">Recruiter</a>
 							</li>
 							
 							<li>
-								<a href="employees.php">Employees</a>
+								<a href="employees.php">Jobseeker</a>
 							</li>
 							
 							<li>
@@ -123,7 +123,7 @@ $page = 1;
 						if ($user_online == true) {
 						print '
 						    <li><a href="logout.php">logout</a></li>
-							<li><a href="'.$myrole.'">Profile</a></li>';
+							<li><a href="./employee/index.php">Profile</a></li>';
 						}else{
 						print '
 							<li><a href="login.php">login</a></li>
@@ -361,7 +361,7 @@ $page = 1;
 									
 										<div class="footer-about-us">
 											<h5 class="footer-title">About Nightingale Jobs</h5>
-											<p>Nightingale Jobs is a job portal, online job management system developed by Nathaniel Nkrumah for his project in february 2018.</p>
+											<p>Nightingale Jobs is a job portal, online job management system developed by @jobportal_Team</p>
 										
 										</div>
 
@@ -372,8 +372,8 @@ $page = 1;
 										<ul class="footer-menu clearfix">
 											<li><a href="./">Home</a></li>
 											<li><a href="job-list.php">Job List</a></li>
-											<li><a href="employers.php">Employers</a></li>
-											<li><a href="employees.php">Employees</a></li>
+											<li><a href="employers.php">Recruiter</a></li>
+											<li><a href="employees.php">Jobseeker</a></li>
 											<li><a href="contact.php">Contact Us</a></li>
 											<li><a href="#">Go to top</a></li>
 
@@ -390,7 +390,7 @@ $page = 1;
 								<h5 class="footer-title">Nightingale Jobs Contact</h5>
 								
 								<p>Address : Takoradi, School Junction PO.BOX AX40</p>
-								<p>Email : <a href="mailto:nightingale.nath2@gmail.com">nightingale.nath2@gmail.com</a></p>
+								<p>Email : <a href="mailto:nightingale.nath2@gmail.com"> jobportal_Team@gmail.com</a></p>
 								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
 								
 
@@ -418,7 +418,7 @@ $page = 1;
 							<div class="col-sm-4 col-md-4">
 							
 								<ul class="bottom-footer-menu">
-									<li><a >Developed by Nathaniel Nkrumah</a></li>
+									<li><a >Developed by  @jobportal_Team</a></li>
 								</ul>
 							
 							</div>
@@ -429,27 +429,16 @@ $page = 1;
 									<li><a href="<?php echo "$fb"; ?>"><i class="ri ri-facebook" data-toggle="tooltip" data-placement="top" title="facebook"></i></a></li>
 									<li><a href="<?php echo "$ig"; ?>"><i class="ri ri-instagram" data-toggle="tooltip" data-placement="top" title="instagram"></i></a></li>
 								</ul>
-							</div>
-						
+							</div>						
 						</div>
-
-					</div>
-					
-				</div>
-			
-			</footer>
-			
+					</div>					
+				</div>			
+			</footer>			
 		</div>
-
-
 	</div> 
- 
- 
-
 <div id="back-to-top">
    <a href="#"><i class="ion-ios-arrow-up"></i></a>
 </div>
-
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
@@ -476,9 +465,4 @@ $page = 1;
 <script type="text/javascript" src="js/jquery.introLoader.min.js"></script>
 <script type="text/javascript" src="js/jquery.responsivegrid.js"></script>
 <script type="text/javascript" src="js/customs.js"></script>
-
-
-</body>
-
-
-</html>
+</body</html>

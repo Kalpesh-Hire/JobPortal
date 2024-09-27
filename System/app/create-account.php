@@ -37,20 +37,14 @@ try {
 	if ($account_type == "101") {
 	register_as_employee();
 	}else{
-	register_as_employer();
-	}
-	
-		
-	}
+	register_as_employer();}}
 					  
 	}catch(PDOException $e)
     {
     header("location:../register.php?p=$role&r=4568");
     }
 }
-
 function register_as_employee() {
-
 try {
 	require '../constants/db_config.php';
 	require '../constants/uniques.php';
